@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<stdlib.h>
+void main()
+{ int choice;
+   do
+  {
+ printf("\n 1-cicrle,2-line,3-rectangle,4-triangle,5-To terminate a program);
+scanf("%d",&choice);
+int gd=DETECT,gm;
+initgraph(&gd,&gm,"path");
+switch (choice)
+{ 
+case 1;
+     int x,y,r;
+     scanf("%d %d %d",&x,&y,&r);
+     circle (x,y,r);
+     break;
+ case 2;
+    int x1,X2,y1,y2;
+    scanf("%d %d %d %d",x1,x2,y1,y2);
+    line(x1,x2,y1,y2);
+    break;
+case 3;
+    int left,right,top,bottom;
+    scanf("%d %d %d %d",&top,&bottom,&left,&right);
+    rectangle (left,top,right,bottom);
+    break;
+case 4;
+    int p,q,r,s;
+    scanf ("%d %d %d %d",&p,&q,&r,&s);
+    line(p,q,r,r);
+    line (p,q,s,r);
+    line(r,r,s,r);
+    break;
+case 5;
+printf("Bye... Ending of Program");
+Exit();
+Break;
+}
+getch();
+closegraph();}}
